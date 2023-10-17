@@ -1,0 +1,21 @@
+[package]
+name = "chatgpt"
+version = "0.1.0"
+edition = "2021"
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+clap = { version = "4", features = ["derive"] }
+color-eyre = "0.6"
+console = "0.15"
+dialoguer = { version = "0.11", features = ["history"] }
+directories = "5"
+figment = { version = "0.10", features = ["env", "toml"] }
+indicatif = "0.17"
+reqwest = { version = "0.11", default-features = false, features = [
+    "blocking",
+    "json",
+    "rustls-tls",
+] }
+serde = { version = "1", features = ["derive"] }
+serde_json = { version = "1", features = ["raw_value"] }
